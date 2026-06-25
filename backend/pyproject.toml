@@ -1,0 +1,23 @@
+[project]
+name = "vestibulif-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Gabriel Archanjo",email = "gabrielarchanjo247@gmail.com"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standart] (>=0.138.0,<0.139.0)",
+    "sqlalchemy (>=2.0.51,<3.0.0)",
+    "alembic (>=1.18.4,<2.0.0)",
+    "uvicorn (>=0.49.0,<0.50.0)",
+    "pydantic-settings (>=2.14.2,<3.0.0)",
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "werkzeug (>=3.1.8,<4.0.0)",
+    "pydantic[email] (>=2.13.4,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
