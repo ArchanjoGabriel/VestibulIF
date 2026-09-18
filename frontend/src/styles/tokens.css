@@ -1,0 +1,30 @@
+/*
+ * Tokens do VestibulIF Piracicaba.
+ * Mesma paleta e mesmas sombras do site original - qualquer cor nova deve
+ * entrar aqui antes de ser usada em um componente.
+ */
+
+:root {
+  --green-900: #11472d;
+  --green-800: #18613a;
+  --green-700: #25884f;
+  --green-500: #3aaa5b;
+  --green-300: #83d18f;
+  --lime: #daf47a;
+  --sand: #f8f4eb;
+  --ink: #1a281f;
+  --white: #ffffff;
+  --shadow: 0 20px 50px rgba(16, 54, 33, 0.2);
+
+  /* Derivados usados em bordas, textos de apoio e superficies de cartao. */
+  --linha: #d1e6d4;
+  --linha-clara: #cfe4d3;
+  --texto-suave: #355544;
+  --texto-apoio: #2d5f42;
+  --erro: #d64545;
+  --erro-escuro: #7a1f1f;
+  --erro-fundo: #fde9e9;
+
+  --fonte-corpo: 'Manrope', system-ui, sans-serif;
+  --fonte-titulo: 'Sora', system-ui, sans-serif;
+}

@@ -1,0 +1,291 @@
+/* Cabecalho, navegacao, largura do conteudo e rodape. */
+
+.site-header {
+  width: min(1200px, 92vw);
+  margin: 24px auto;
+  padding: 12px 16px;
+  border-radius: 20px;
+  background: rgba(19, 90, 51, 0.84);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  /* Sem isto o texto da marca impoe uma largura minima e estoura o cabecalho
+     em telas estreitas. */
+  min-width: 0;
+}
+
+/* Marca: 8 quadradinhos brancos formando um "IF" estilizado. */
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background:
+    linear-gradient(#fff, #fff) 0 0 / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 14px 0 / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 28px 0 / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 0 14px / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 14px 14px / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 0 28px / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 14px 28px / 10px 10px no-repeat,
+    linear-gradient(#fff, #fff) 28px 28px / 10px 10px no-repeat;
+}
+
+.brand-text {
+  display: grid;
+  line-height: 1.05;
+  min-width: 0;
+}
+
+.brand-text strong {
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-text small {
+  opacity: 0.9;
+  font-size: 0.74rem;
+}
+
+.main-nav {
+  justify-self: center;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #e8fce8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+  color: var(--lime);
+}
+
+.main-nav a.active {
+  color: var(--lime);
+}
+
+/* Entrar/Criar conta dentro do menu: so aparecem quando os botoes da direita
+   somem no mobile. */
+.nav-auth {
+  display: none;
+}
+
+.link-entrar {
+  color: #e8fce8;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 4px;
+  white-space: nowrap;
+}
+
+.link-entrar:hover {
+  color: var(--lime);
+  text-decoration: none;
+}
+
+.cta-top,
+.menu-toggle {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 16px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.cta-top:hover,
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Usuario logado no canto direito do cabecalho. */
+.header-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+  padding: 4px 10px 4px 4px;
+  border-radius: 999px;
+}
+
+.header-user:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header-user-avatar {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #14542f;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.header-user-nome {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.header-acoes {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main {
+  width: min(1200px, 92vw);
+  margin: 0 auto 60px;
+  display: grid;
+  gap: 28px;
+  flex: 1;
+}
+
+/* Item de grid tem min-width: auto e se recusa a encolher abaixo do proprio
+   conteudo. Sem isto, a tabela de historico (min-width 620px) estica a pagina
+   inteira no celular em vez de rolar dentro do seu envoltorio. */
+main > *,
+.dashboard-grid > * {
+  min-width: 0;
+}
+
+/* Paginas internas usam um respiro menor no topo. */
+main.dashboard-main {
+  margin: 22px auto 56px;
+  gap: 20px;
+}
+
+main.quiz-main {
+  width: min(920px, 92vw);
+  gap: 18px;
+}
+
+main.auth-main-wrapper {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 34px 16px;
+}
+
+.site-footer {
+  width: min(1200px, 92vw);
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  color: #2f5a42;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+@media (max-width: 840px) {
+  .site-header {
+    grid-template-columns: 1fr auto auto;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    display: none;
+    background: rgba(20, 95, 54, 0.96);
+    border-radius: 16px;
+    padding: 14px;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .header-user-nome {
+    display: none;
+  }
+
+  /* Como no site original, os botoes de convite somem no mobile - Entrar e
+     Criar conta passam a viver dentro do menu. O botao "Sair" do usuario logado
+     continua visivel, porque e a unica forma de encerrar a sessao aqui. */
+  .cta-publica {
+    display: none;
+  }
+
+  .nav-auth {
+    display: block;
+    margin-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 12px;
+    color: var(--lime);
+  }
+
+  .nav-auth + .nav-auth {
+    margin-top: 0;
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-text strong {
+    font-size: 0.86rem;
+  }
+
+  .brand-text small {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    margin-top: 14px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
