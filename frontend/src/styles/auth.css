@@ -1,0 +1,172 @@
+/* Login e cadastro: painel institucional a esquerda, formulario a direita. */
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 34px 16px;
+}
+
+.auth-shell {
+  width: min(1040px, 96vw);
+  border-radius: 30px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  box-shadow: var(--shadow);
+  background: white;
+}
+
+.auth-aside {
+  padding: clamp(26px, 5vw, 48px);
+  background:
+    linear-gradient(140deg, rgba(17, 71, 45, 0.95), rgba(54, 153, 85, 0.86)),
+    url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80')
+      center / cover;
+  color: white;
+}
+
+.auth-aside h1 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.auth-aside p {
+  max-width: 40ch;
+  opacity: 0.96;
+}
+
+.auth-metrics {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.auth-metrics li {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.auth-main {
+  padding: clamp(24px, 5vw, 40px);
+}
+
+.auth-main h2 {
+  margin: 0 0 10px;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.auth-main > p {
+  margin-top: 0;
+  color: #446150;
+}
+
+.auth-message {
+  border-radius: 12px;
+  margin: 0 0 14px;
+  padding: 12px;
+  font-weight: 700;
+}
+
+.auth-message-error {
+  border: 1px solid #e7b6a5;
+  background: #fff1eb;
+  color: #8b2e16;
+}
+
+.auth-message-ok {
+  border: 1px solid var(--green-500);
+  background: #e6f8ea;
+  color: #14542f;
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  color: #2d5f42;
+  font-size: 0.92rem;
+}
+
+.auth-form input {
+  border: 1px solid #c2dcc8;
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--green-500);
+  box-shadow: 0 0 0 3px rgba(58, 170, 91, 0.18);
+}
+
+.auth-form input[aria-invalid='true'] {
+  border-color: var(--erro);
+}
+
+.auth-form button {
+  margin-top: 6px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px;
+  font: 800 1rem var(--fonte-corpo);
+  color: white;
+  background: linear-gradient(120deg, var(--green-700), var(--green-500));
+  cursor: pointer;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Erro de validacao logo abaixo do campo. */
+.campo-erro {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--erro-escuro);
+}
+
+.campo-dica {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6a8577;
+}
+
+.auth-links {
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.auth-links a {
+  font-weight: 700;
+  color: var(--green-700);
+}
+
+.return-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #244f38;
+}
+
+@media (max-width: 1080px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,59 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: "Manrope", sans-serif;
+    overflow: hidden;
+}
+
+#svg-map {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#svg-map text {
+    fill: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    pointer-events: none;
+}
+
+#svg-map a {
+    text-decoration: none;
+}
+
+/* Estados com IF: verde normal */
+#svg-map a.has-if path {
+    fill: #2f9f59;
+    transition: fill 0.18s ease;
+}
+
+#svg-map a.has-if .circle {
+    fill: #1f7f45;
+}
+
+#svg-map a.has-if:hover path {
+    fill: #daf47a !important;
+    cursor: pointer;
+}
+
+/* Estados sem IF: cinza-verde */
+#svg-map a.no-if path,
+#svg-map .state-no-if {
+    fill: #90a69a;
+}
+
+#svg-map a.no-if .circle {
+    fill: #7b9185;
+}
+
+#svg-map a.no-if:hover path {
+    fill: #b1c2b8 !important;
+    cursor: not-allowed;
+}
