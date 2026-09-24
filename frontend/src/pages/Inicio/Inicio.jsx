@@ -61,6 +61,24 @@ const PERGUNTAS = [
   },
 ]
 
+const PILARES = [
+  {
+    titulo: 'Gratuito',
+    texto:
+      'Nenhuma funcionalidade é paga e não há anúncios. Quem quer estudar não deveria esbarrar num preço.',
+  },
+  {
+    titulo: 'Conteúdo oficial',
+    texto:
+      'As provas vêm dos cadernos publicados pelo próprio IFSP, com cada resposta conferida contra o gabarito final.',
+  },
+  {
+    titulo: 'Acessível a todos',
+    texto:
+      'Funciona no celular, é navegável pelo teclado e foi pensado para quem tem pouca banda ou pouco tempo.',
+  },
+]
+
 export function Inicio() {
   useTituloDaPagina()
 
@@ -177,6 +195,43 @@ export function Inicio() {
             <p>{item.resposta}</p>
           </details>
         ))}
+      </section>
+
+      <section className="sobre" id="sobre">
+        <div className="section-head">
+          <p>quem faz o vestibulif</p>
+          <h2>Sobre nós</h2>
+        </div>
+
+        <div className="sobre-grid">
+          <div className="sobre-texto">
+            <p>
+              Somos estudantes do <strong>4º ano do Ensino Médio Integrado do IFSP Campus
+              Piracicaba</strong>. A ideia deste site nasceu da nossa própria experiência com o
+              processo seletivo: achar as provas anteriores e descobrir o que realmente cai era
+              bem mais difícil do que precisava ser.
+            </p>
+            <p>
+              Nossa missão é ajudar quem pretende entrar no Instituto Federal, reunindo num lugar
+              só as provas oficiais aplicadas pelo IFSP, as videoaulas dos conteúdos cobrados e a
+              correção comentada de cada simulado.
+            </p>
+            <p>
+              Tudo aqui é <strong>gratuito e acessível a todos</strong>. A educação pública de
+              qualidade já é um direito; o acesso à preparação para entrar nela também deveria
+              ser.
+            </p>
+          </div>
+
+          <ul className="sobre-pilares">
+            {PILARES.map((pilar) => (
+              <li key={pilar.titulo}>
+                <strong>{pilar.titulo}</strong>
+                <span>{pilar.texto}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </main>
   )
