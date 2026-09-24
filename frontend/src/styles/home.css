@@ -111,7 +111,8 @@
 .courses,
 .events,
 .faq,
-.map-section {
+.map-section,
+.sobre {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 14px 36px rgba(26, 79, 46, 0.09);
@@ -280,6 +281,52 @@
   opacity: 0.88;
 }
 
+/* Sobre nós */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.sobre-texto p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+  max-width: 68ch;
+}
+
+.sobre-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre-pilares {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.sobre-pilares li {
+  border: 1px solid #cfe5d2;
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: linear-gradient(160deg, #f4fff2, #ffffff);
+}
+
+.sobre-pilares strong {
+  display: block;
+  font-family: var(--fonte-titulo);
+  margin-bottom: 4px;
+}
+
+.sobre-pilares span {
+  color: var(--texto-suave);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 1080px) {
   .hero {
     grid-template-columns: 1fr;
@@ -291,7 +338,8 @@
   }
 
   .highlights,
-  .events {
+  .events,
+  .sobre-grid {
     grid-template-columns: 1fr;
   }
 }

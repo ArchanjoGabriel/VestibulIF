@@ -17,6 +17,7 @@ const LINKS_PUBLICOS = [
   { href: '#trilhas', rotulo: 'Trilhas' },
   { href: '#cursos', rotulo: 'Cursos' },
   { href: '#faq', rotulo: 'FAQ' },
+  { href: '#sobre', rotulo: 'Sobre nós' },
 ]
 
 /**
