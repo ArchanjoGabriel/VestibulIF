@@ -41,7 +41,7 @@ export function Dashboard() {
     <main className="dashboard-main" id="conteudo-principal">
       <section className="dashboard-hero">
         <p className="hero-kicker">painel do estudante</p>
-        <h1>Ola, {primeiroNome(usuario?.nome) || 'estudante'}!</h1>
+        <h1>Olá, {primeiroNome(usuario?.nome) || 'estudante'}!</h1>
         <p>
           {semHistorico
             ? 'Você ainda não fez nenhum simulado. Comece por uma prova e acompanhe sua evolução aqui.'
