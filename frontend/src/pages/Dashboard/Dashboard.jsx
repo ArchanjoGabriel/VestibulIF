@@ -13,7 +13,7 @@ const PLANO_SEMANAL = [
   { dia: 'Segunda', atividade: 'Simulado de Linguagens e Humanas' },
   { dia: 'Quarta', atividade: 'Revisão de Matemática e exercícios' },
   { dia: 'Sexta', atividade: 'Videoaula + questões comentadas' },
-  { dia: 'Sabado', atividade: 'Redação com tema atual' },
+  { dia: 'Sábado', atividade: 'Redação com tema atual' },
 ]
 
 export function Dashboard() {
