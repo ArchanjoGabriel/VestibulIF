@@ -13,7 +13,7 @@ export function validarNome(nome) {
   const valor = (nome || '').trim()
   if (!valor) return 'Informe seu nome.'
   if (valor.length < 3) return 'O nome precisa ter ao menos 3 caracteres.'
-  if (valor.length > 100) return 'O nome pode ter no maximo 100 caracteres.'
+  if (valor.length > 100) return 'O nome pode ter no máximo 100 caracteres.'
   return null
 }
 
@@ -21,7 +21,7 @@ export function validarEmail(email) {
   const valor = (email || '').trim()
   if (!valor) return 'Informe seu e-mail.'
   if (!REGEX_EMAIL.test(valor)) return 'Digite um e-mail válido.'
-  if (valor.length > 100) return 'O e-mail pode ter no maximo 100 caracteres.'
+  if (valor.length > 100) return 'O e-mail pode ter no máximo 100 caracteres.'
   return null
 }
 

@@ -196,7 +196,7 @@ export function Resultado() {
                       campo, o bloco simplesmente nao aparece. */}
                   {item.explicacao && (
                     <p className="correcao-explicacao">
-                      <strong>Por que:</strong> {item.explicacao}
+                      <strong>Por quê:</strong> {item.explicacao}
                     </p>
                   )}
                 </article>

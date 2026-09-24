@@ -18,7 +18,7 @@ export function Videoaulas() {
         <p className="hero-kicker">videoaulas por matéria</p>
         <h1>Estude com videoaulas selecionadas</h1>
         <p>
-          Assista aulas organizadas por matéria para se preparar para o processo seletivo do IFSP
+          Assista às aulas organizadas por matéria para se preparar para o processo seletivo do IFSP
           Piracicaba.
         </p>
       </section>
